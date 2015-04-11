@@ -1,3 +1,5 @@
+/* global app:true */
+/* exported app */
 'use strict';
 
 /**
@@ -8,7 +10,7 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('webnotes2App', [
     'ngAnimate',
     'ngAria',
@@ -21,10 +23,10 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
+	.when('/', {
+	  templateUrl: 'views/posts.html',
+	  controller: 'PostsCtrl'
+	})
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
