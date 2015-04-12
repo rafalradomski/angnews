@@ -4,14 +4,14 @@
 
 /**
  * @ngdoc overview
- * @name webnotes2App
+ * @name angNewsApp
  * @description
- * # webnotes2App
+ * # angNewsApp
  *
  * Main module of the application.
  */
 var app = angular
-  .module('webnotes2App', [
+  .module('angNewsApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
