@@ -2,10 +2,11 @@
 /* exported app */
 'use strict';
 
-app.controller('PostsCtrl', function ($scope, Post) {
+app.controller('PostsCtrl', function ($scope, $location, Post, Auth ) {
 	// $scope.posts = [];
 	//$scope.posts = Post.get();
 	$scope.posts = Post.all;
+	$scope.user = Auth.user;
 	
 	// DELETE POST
 	// $scope.deletePost = function (index) {
