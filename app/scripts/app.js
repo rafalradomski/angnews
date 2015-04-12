@@ -24,6 +24,24 @@ var app = angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
+	.when('/login', {
+	  templateUrl: 'views/login.html',
+	  controller: 'AuthCtrl',
+	  resolve: {
+		user: function(Auth) {
+		  return Auth.resolveUser();
+		}
+	  }
+	})
+	.when('/register', {
+	  templateUrl: 'views/register.html',
+	  controller: 'AuthCtrl',
+	  resolve: {
+		user: function(Auth) {
+		  return Auth.resolveUser();
+		}
+	  }
+	})
 	.when('/', {
 	  templateUrl: 'views/posts.html',
 	  controller: 'PostsCtrl'

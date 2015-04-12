@@ -2,7 +2,11 @@
 /* exported app */
 'use strict';
 
-app.controller('NavCtrl', function($scope, $location, Post) {
+app.controller('NavCtrl', function($scope, $location, Post, Auth) {
+	// AUTH
+	$scope.signedIn = Auth.signedIn;
+	$scope.logout = Auth.logout;
+	
 	$scope.post = {url: 'http://', title: ''};
 
 	// SUMBIT POST
