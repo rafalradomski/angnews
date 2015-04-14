@@ -46,12 +46,16 @@ var app = angular
 	  templateUrl: 'views/posts.html',
 	  controller: 'PostsCtrl'
 	})
-	  .when('/about', {
-		templateUrl: 'views/about.html',
-		controller: 'AboutCtrl'
-	  })
-	  .otherwise({
-		redirectTo: '/'
-	  });
+    .when('/posts/:postId', {
+      templateUrl: 'views/showpost.html',
+      controller: 'PostViewCtrl'
+    })
+	.when('/users/:userId', {
+	  templateUrl: 'views/profile.html',
+	  controller: 'ProfileCtrl'
+	})
+	.otherwise({
+	redirectTo: '/'
+	});
   })
   .constant('FIREBASE_URL', 'https://scorching-heat-9226.firebaseio.com/');
